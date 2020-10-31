@@ -1,5 +1,19 @@
 .promo {
+    position: relative;
     padding-top: 205px;
     background: url('../../img/bg__main.jpg') 50%/cover no-repeat;
     min-height: 100vh;
+    &_title {
+        max-width: 500px;
+        margin-bottom: 25px;
+    }
+    &_subtitle {
+        padding-left: 10px;
+    }
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 280px;
+    }
 }
