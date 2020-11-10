@@ -4,9 +4,15 @@
     height: 45px;
     background-color: $main-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
     font-weight: bold;
     &_promo {
         background-color: transparent;
         box-shadow: none;
+    }
+    &_form {
+        box-shadow: none;
+        width: auto;
+        border: none;
     }
 }
