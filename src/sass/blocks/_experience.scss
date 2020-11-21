@@ -4,7 +4,7 @@
     &_head {
         text-align: center;
         @include before_circle;
-        &:before {
+        &::before {
             top: 121px;
             left: 50%;
             transform: translateX(-50%);

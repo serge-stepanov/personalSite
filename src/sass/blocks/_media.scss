@@ -8,17 +8,134 @@
     .container {
         max-width: 960px;
     }
+    .intro {
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        &__skills {
+            column-gap: 15px;
+        }
+    }
+    .experience {
+        &__wrapper {
+            gap: 50px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-between;
+        }
+        &__scale {
+            grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+        }
+
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            justify-content: space-between;
+            gap: 35px;
+        }
+        &__link {
+            &_horizontal, &_vertical {
+                grid-column: unset;
+                grid-row: unset;
+            }
+        }
+    }
+    .form {
+        &__wrapper {
+            grid-template-columns: 400px minmax(300px, auto);
+            justify-content: normal;
+            column-gap: 15px;
+        }
+        &__form {
+            grid-template-columns: repeat(2, minmax(260px, auto));
+        }
+    }
 }
 
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
     }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+            line-height: 45px;
+        }
+    }
+    .intro {
+        &__wrapper {
+            grid-template-columns: repeat(2, 340px);
+            gap: 40px;
+        }
+        &__skills {
+            grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+
+        }
+        &__skill {
+            grid-template-columns: 40px auto;
+        }
+    }
+    .experience {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(425px, auto));
+        }
+    }
+    .skills {
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+    .form {
+        padding-top: 50px;
+        &__wrapper {
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+        &__column {
+            &_photo {
+                display: none;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
+    }
+    .title {
+        &_fz48 {
+            font-size: 30px;
+        }
+    }
+    .intro {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template: 400px auto auto/1fr;
+        }
+    }
+    .experience {
+        padding-top: 40px;
+        &_head {
+            &::before {
+                top: 34px;
+            }
+        }
+    }
+    .skills {
+        &__wrapper {
+            justify-content: center;
+        }
     }
 }
 
@@ -27,4 +144,91 @@
         width: 100%;
         padding: 0 10px;
     }
+    .hamburger {
+        right: 20px;
+    }
+    .menu {
+        &__block {
+            width: 230px;
+        }
+    }
+    .title {
+        &_fz48 {
+            font-size: 25px;
+        }
+        &_fz36 {
+            font-size: 25px;
+        }
+    }
+    .intro {
+        &__wrapper {
+            grid-template: 340px auto auto/1fr;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
+        }
+    }
+    .experience {
+        &__wrapper {
+            padding: 40px 0 0 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        }
+        &__column{
+            &_item {
+                &::before {
+                    width: 26px;
+                }
+            }
+            &_icon {
+                left: 40px;
+            }
+            &_header, &_subheader {
+                padding-left: 70px;
+            }
+        }
+    }
+    .skills {
+        padding-top: 50px;
+        &__scale {
+            padding-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        }
+    }
+    .portfolio {
+        padding-top: 60px;
+        &__wrapper {
+            gap: 15px;
+        }
+    }
+    .form {
+        &__form {
+            grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+            &-item {
+                &_text {
+                    grid-column: unset;
+                    width: 100%;
+                }
+                &_trigger {
+                    grid-column: unset;
+                    grid-template-columns: 1fr;
+                    column-gap: unset;
+                    row-gap: 20px;
+                }
+                &_btn {
+                    max-width: 220px;
+                    margin: 0 auto;
+                }
+                &_policy {
+                    width: 220px;
+                    margin: 0 auto;
+                    line-height: 18px;
+                    order: -1;
+                    &-text {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+     
 }
